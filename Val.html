@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's, Christiana! 💖</title>
+    <style>
+        /* Full-Screen Neon Background */
+        body {
+            background: radial-gradient(circle, #ff4e50, #fc913a, #ff4081);
+            color: white;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Valentine's Heading */
+        h1 {
+            font-size: 3em;
+            text-shadow: 0px 0px 20px white;
+            animation: glow 1.5s infinite alternate;
+            margin-top: 30px;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0px 0px 20px white; }
+            to { text-shadow: 0px 0px 30px yellow; }
+        }
+
+        /* Animated Colorful Name */
+        .neon-name {
+            font-size: 4em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff0000, #ff7300, #ffeb00, #00ff6a, #006eff, #c200ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: neonMove 4s infinite alternate;
+            text-shadow: 0px 0px 10px white;
+        }
+
+        @keyframes neonMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Love Message */
+        .message {
+            font-size: 1.5em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px white;
+            margin: 20px;
+        }
+
+        /* Image Slideshow */
+        .slideshow-container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px white;
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Love Quote Button */
+        .quote-button {
+            background-color: white;
+            color: #ff4081;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0px 0px 15px white;
+        }
+
+        .quote-button:hover {
+            background-color: #ff4081;
+            color: white;
+        }
+
+        /* Quote Display */
+        #loveQuote {
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            font-size: 1.3em;
+            color: #fdfd96;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5em; }
+            .neon-name { font-size: 3em; }
+            .message { font-size: 1.2em; }
+            .quote-button { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 Happy Valentine's,</h1>
+    <h1 class="neon-name">Christiana! 💖</h1>
+
+    <!-- Love Message -->
+    <div class="message">
+        My dearest Christiana, you are more beautiful than a sunrise and more precious than gold.  
+        You light up my world and make every moment magical. I appreciate and cherish you more than words can express.  
+        <br><br>
+        **With all my heart, from Samuel, your love.** ❤️
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <img class="slides" src="image1.jpg" alt="Christiana">
+        <img class="slides" src="image2.jpg" alt="Christiana">
+        <img class="slides" src="image3.jpg" alt="Christiana">
+        <!-- Add more images here -->
+    </div>
+
+    <!-- Love Quote Button -->
+    <button class="quote-button" onclick="showLoveQuote()">Click for a Love Quote ❤️</button>
+
+    <!-- Quote Display -->
+    <p id="loveQuote">"Love is in the air..."</p>
+
+    <!-- Footer -->
+    <div class="footer">
+        **Forever yours, Samuel** ❤️
+    </div>
+
+    <script>
+        // Slideshow Functionality
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        showSlides();
+
+        // Love Quotes
+        const quotes = [
+    "Christiana, every beat of my heart whispers your name. Forever yours, Samuel. ❤️",
+    "No matter where life takes us, Christiana, my love for you will never fade. - Samuel 💕",
+    "Christiana, you are the melody to my song, the rhythm to my heartbeat. - Samuel 🎶💖",
+    "Holding you in my arms, Christiana, feels like I am holding the whole world. - Samuel 🌍❤️",
+    "Every sunrise reminds me of your glowing smile, Christiana. I am forever enchanted. - Samuel ☀️💘",
+    "Christiana, loving you is my greatest adventure. Let's write our love story forever. - Samuel 📖💑",
+    "From the moment I met you, Christiana, my heart chose you, and it always will. - Samuel 💞",
+    "I could search the entire universe, but no one compares to you, Christiana. - Samuel ✨💖",
+    "Christiana, your love is the magic that turns my ordinary days into fairy tales. - Samuel 🏰❤️",
+    "Every 'I love you' I whisper, Christiana, carries the weight of eternity. - Samuel 💕⏳",
+    "The stars shine in the sky, but Christiana, you shine the brightest in my heart. - Samuel 🌟❤️",
+    "Christiana, I love you not only for who you are but for who I become when I am with you. - Samuel 💑",
+    "Your love, Christiana, is the fuel that keeps my soul alive. Forever yours, Samuel. 🔥💖",
+    "Christiana, every second spent with you is a moment of paradise. - Samuel 🌴❤️",
+    "If love had a name, Christiana, it would be yours. You are my forever. - Samuel 💞",
+    "With you, Christiana, every heartbeat sings a love song. - Samuel 🎶💖",
+    "The best part of my day, Christiana, is every moment I spend with you. - Samuel ⏳💕",
+    "Christiana, your love is the most precious gift I have ever received. - Samuel 🎁💘",
+    "I don’t need paradise, Christiana, because I found it in you. - Samuel 🌹💖",
+    "Christiana, every time I see you, I fall in love all over again. - Samuel 💘",
+    "You are the dream I never want to wake up from, Christiana. - Samuel 🌙💞",
+    "No matter how dark the night, Christiana, your love is my guiding light. - Samuel ✨💖",
+    "Christiana, in your love, I have found my home. - Samuel 🏡❤️",
+    "Every love song makes sense now, Christiana, because I have you. - Samuel 🎶💕",
+    "I would rather spend one lifetime with you, Christiana, than face all eternity alone. - Samuel ⏳❤️",
+    "Christiana, every day with you is my favorite day. So today is my new favorite day. - Samuel 💕",
+    "If kisses were stars, Christiana, I would give you the whole galaxy. - Samuel 🌌💘",
+    "Your love, Christiana, is the poetry my heart has been longing to write. - Samuel ✍️💖",
+    "Christiana, I fall in love with you more and more every single day. - Samuel 💘",
+    "With you, Christiana, forever will never be long enough. - Samuel ♾️❤️",
+    "You are my angel, Christiana, and I am forever grateful for you. - Samuel 👼💖",
+    "Christiana, your smile is my sunshine, your love my forever home. - Samuel ☀️🏡",
+    "The moment you walked into my life, Christiana, everything changed for the better. - Samuel 💞",
+    "Christiana, my love for you is as deep as the ocean and as endless as the sky. - Samuel 🌊💖",
+    "Even if I had a hundred lifetimes, Christiana, I would choose you every single time. - Samuel 💕",
+    "Christiana, you make my world brighter, my heart lighter, and my soul happier. - Samuel 💖",
+    "You are my best friend, my love, my everything, Christiana. - Samuel 💞",
+    "Christiana, your love is the melody that plays in my heart every second of the day. - Samuel 🎶💖",
+    "Every heartbeat of mine, Christiana, beats only for you. - Samuel ❤️",
+    "Christiana, when I count my blessings, I count you a thousand times over. - Samuel 💕",
+    "My world is more beautiful because of you, Christiana. - Samuel 🌸💖",
+    "Christiana, you are the magic my heart always believed in. - Samuel ✨❤️",
+    "Every time I look into your eyes, Christiana, I see my forever. - Samuel 💞",
+    "I love you not just for what you are, Christiana, but for what I am when I’m with you. - Samuel ❤️",
+    "Christiana, I will love you until the stars burn out and the tides stop turning. - Samuel 🌊💖",
+    "You make my world colorful, Christiana, like a rainbow after a storm. - Samuel 🌈💞",
+    "Christiana, I never knew love until I found you. Now, I never want to let go. - Samuel ❤️",
+    "My love for you, Christiana, is like the universe—expanding and endless. - Samuel 💫💖",
+    "You are the best part of me, Christiana, and I wouldn’t have it any other way. - Samuel 💕",
+    "Christiana, I love you more than words can say and more than my heart can hold. - Samuel ❤️",
+    "Christiana, you are the reason my heart beats, my soul sings, and my dreams shine. - Samuel 💖",
+    "No matter where life takes us, Christiana, my love for you will never change. - Samuel 💕",
+    "Loving you, Christiana, is the easiest thing I’ve ever done. - Samuel 💖",
+    "If love had a name, Christiana, it would be yours. - Samuel 💕",
+    "Christiana, you are the rhythm that makes my heart dance. - Samuel 🎶💖",
+    "You are the spark in my fire, Christiana, the light in my darkness. - Samuel 🔥❤️",
+    "Christiana, every moment with you is a treasure I hold close to my heart. - Samuel 💕",
+    "From now until forever, Christiana, you are my always and forever. - Samuel ♾️❤️",
+    "Christiana, if I had a flower for every time I thought of you, my garden would be endless. - Samuel 🌸💖",
+    "You are the most beautiful love story ever written, Christiana, and I’m lucky to be part of it. - Samuel 📖💕",
+    "My love for you, Christiana, grows deeper with every breath I take. - Samuel 💖",
+    "Christiana, every second with you is a memory worth keeping forever. - Samuel 💞",
+    "You are the love of my life, Christiana, and my heart belongs only to you. - Samuel ❤️"
+        ];
+
+        function showLoveQuote() {
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("loveQuote").innerText = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
